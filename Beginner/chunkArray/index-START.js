@@ -5,7 +5,20 @@
 */
 
 function chunkArray(array, size) {
-    // Code goes here
+    let ans = [];
+    let subArr = [];
+
+    for(let i = 0; i < array.length; i++){
+      if(subArr.length === size){
+        ans.push(subArr)
+        subArr = []
+      }
+      if(subArr.length < size){
+        subArr.push(array[i]);
+      }
+    }
+    if(subArr.length >= 1) ans.push(subArr);
+    return ans;
 }
 
 
