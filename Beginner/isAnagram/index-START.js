@@ -8,8 +8,8 @@ don't. E.g
 
 
 function isAnagram(stringA, stringB) {
-    // Code goes here
-}
+    return (stringA.split('').sort().join() === stringB.split('').sort().join())
+ }
 
 
 module.exports = isAnagram
